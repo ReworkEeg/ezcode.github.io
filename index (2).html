@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzCode Client | Вспомогательная утилита Minecraft</title>
+    <style>
+        /* Общие стили и обнуление */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f1115;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Шапка сайта (Header) */
+        header {
+            background-color: rgba(21, 24, 32, 0.95);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8; /* Голубой неоновый акцент */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Главный экран (Hero Section) */
+        .hero {
+            padding: 180px 0 100px 0;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f1115 70%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #38bdf8;
+            color: #0f1115;
+            padding: 14px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+        }
+
+        /* Секция "Функции" (Features) */
+        .features {
+            padding: 80px 0;
+            background-color: #11141a;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #fff;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #38bdf8;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .feature-card h3 {
+            font-size: 22px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #94a3b8;
+            font-size: 15px;
+        }
+
+        /* Секция "Скачать" (Download) */
+        .download {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #0f1115 0%, #1e293b 100%);
+        }
+
+        .download h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .download p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        /* Подвал (Footer) */
+        footer {
+            background-color: #0f1115;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">EzCode<span>Client</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#features">Функции</a></li>
+                    <li><a href="#download">Скачать</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Улучшай свой геймплей с EzCode</h1>
+            <p>Продвинутая вспомогательная утилита для Minecraft. Оптимизация, удобные бинды и полная кастомизация под твой стиль игры.</p>
+            <a href="#download" class="btn">Скачать бесплатно</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Почему выбирают EzCode?</h2>
+            <div class="features-grid">
+                
+                <div class="feature-card">
+                    <h3>Высокий FPS</h3>
+                    <p>Оптимизированный код утилиты не нагружает систему. Получи максимальную плавность и стабильные кадры в секунду.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Удобные бинды</h3>
+                    <p>Настраивай макросы и горячие клавиши в пару кликов. Всё самое необходимое всегда под рукой в нужный момент.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Кастомизация HUD</h3>
+                    <p>Настраивай интерфейс игры так, как удобно тебе. Перемещай элементы, меняй цвета и шрифты без ограничений.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Безопасность</h3>
+                    <p>Утилита разработана с упором на незаметность для базовых проверок, обеспечивая комфортную и стабильную работу.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <div class="container">
+            <h2>Готов доминировать?</h2>
+            <p>Скачай EzCode Client прямо сейчас. Поддерживаются версии Minecraft 1.12.2 - 1.20+ (Forge / Fabric).</p>
+            <a href="#" class="btn">Загрузить .JAR</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&times; 2026 EzCode Client. All rights reserved. Не аффилировано с Mojang Studios / Microsoft.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
